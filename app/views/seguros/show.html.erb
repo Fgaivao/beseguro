@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @seguro.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @seguro.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @seguro.image %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @seguro.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_seguro_path(@seguro) %> |
+<%= link_to 'Back', seguros_path %>
