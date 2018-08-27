@@ -10,6 +10,7 @@ class SegurosController < ApplicationController
   # GET /seguros/1
   # GET /seguros/1.json
   def show
+    @seguro = Seguro.find(params[:id])
   end
 
   # GET /seguros/new
@@ -60,6 +61,7 @@ class SegurosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
