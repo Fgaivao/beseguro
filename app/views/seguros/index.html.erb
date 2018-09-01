@@ -9,24 +9,28 @@
 
   <div class="wrapper">
     <%= image_tag seguro.image.thumb.url%>
-    <div class="header">
+    <div class="header" style="font-size: 50px;">
       <%= seguro.name %>
 
-      <div class="data">
+
+          </span>
+          <div class="white" style="float: right; position: relative; width: 30%;">
+            <div class="data">
         <div class="content">
           <span class="author"><%= seguro.description %>
             <h1 class="title"><%= seguro.tipo %></h1>
-          </span>
+          </div>
 
 
         </div>
       </div>
     </div>
   </div>
-</div>
-<%= link_to 'Ver Mais', seguro %>
+  <%= link_to 'Ver Mais', seguro %>
 <%= link_to 'Edit', edit_seguro_path(seguro) %>
 <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
 
 <% end %>
 </div>
