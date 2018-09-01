@@ -3,3 +3,25 @@
 <%= render 'form', seguro: @seguro %>
 
 <%= link_to 'Back', seguros_path %>
+<div class="topnav" id="myTopnav">
+    <div class="w3-container w3-center w3-animate-left">
+    <a href="#home">Home</a>
+    <%= link_to "Seguros", seguros_path, :class => "active"%>
+    <%= link_to "Contactos", teams_path%>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  </div>
+  <div class="topnav" id="myTopnav">
+    <div class="w3-container w3-center w3-animate-left">
+    <%= link_to "Home", root_path%>
+    <%= link_to "Seguros", seguros_path, :class => "active"%>
+    <%= link_to "Contactos", teams_path%>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  </div>
