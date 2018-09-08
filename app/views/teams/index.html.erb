@@ -18,7 +18,7 @@
       <tr>
         <td><%= team.name %></td>
         <td><%= team.description %></td>
-        <td><%= team.picture %></td>
+        <td><%=  image_tag seguro.image.thumb.url%></td>
         <td><%= team.email %></td>
         <td><%= link_to 'Show', team %></td>
         <td><%= link_to 'Edit', edit_team_path(team) %></td>

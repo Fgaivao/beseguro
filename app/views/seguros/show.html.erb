@@ -1,12 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong></strong>
-  <%= image_tag @seguro.image.thumb.url, :style => "width: 100%;" %>
-</p>
+<div class="example-2 card">
+
+  <div class="wrapper">
+    <%= image_tag @seguro.image.thumb.url%>
+    <div class="header" style="font-size: 50px;">
+      <%= @seguro.name %>
 
 
-<%= link_to 'Edit', edit_seguro_path(@seguro) %> |
+          </span>
+          <div class="white" style="float: right; position: relative; width: 30%;">
+            <div class="data">
+        <div class="content">
+          <span class="author"><%= @seguro.description %>
+            <h1 class="title"><%= @seguro.tipo %></h1>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% if @admin_signed_in %>
+<%= link_to 'Edit', edit_seguro_path(@seguro) %>
+<% end %>
 <%= link_to 'Back', seguros_path %>
 <div class="topnav" id="myTopnav">
     <div class="w3-container w3-center w3-animate-left">
