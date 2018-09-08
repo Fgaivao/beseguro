@@ -26,21 +26,31 @@
       </div>
     </div>
   </div>
-  <%= link_to 'Ver Mais', seguro %>
+<% if admin_signed_in? %>
+
 <%= link_to 'Edit', edit_seguro_path(seguro) %>
 <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>
+<%= link_to 'Ver Mais', seguro %>
 </div>
-
-
 <% end %>
 </div>
 
 
 
+
+
 <br>
-
-
+<% if admin_signed_in? %>
 <%= link_to 'New Seguro', new_seguro_path %>
+  <%= link_to('Logout', destroy_admin_session_path, method: :delete) %>
+
+<% end %>
+
+
+
+
 <div class="topnav" id="myTopnav">
   <div class="w3-container w3-center w3-animate-left">
     <%= link_to "Home", root_path%>
