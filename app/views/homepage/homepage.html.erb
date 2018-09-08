@@ -1,1 +1,18 @@
+<div class="home">
+  <%= image_tag ("lisboa.jpg"), :style => "height: 100%; width: 100%; postion:relative; opacity: 0.5;" %>
+  <!-- <div class="w3-container w3-center w3-animate-left"> -->
+  <%= image_tag ("logoaz.png"), :style => "height: 50%; width: 50%; z-index: 2; position:absolute; top:30px; right:25%;", :class => "w3-container w3-center w3-animate-top"%>
+<!-- </div> -->
+  <div class="topnav" id="myTopnav">
+    <div class="w3-container w3-center w3-animate-left">
+    <a href="#home" class="active">Home</a>
+    <%= link_to "Seguros", seguros_path%>
+    <%= link_to "Contactos", teams_path%>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  </div>
 
+</div>
