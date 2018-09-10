@@ -133,40 +133,7 @@ h1 {
       color: lighten($black, 50%);
     }
   }
-  .menu-button {
-    position: absolute;
-    z-index: 999;
-    top: 16px;
-    right: 16px;
-    width: 25px;
-    text-align: center;
-    cursor: pointer;
-    span {
-      width: 5px;
-      height: 5px;
-      background-color: lighten($black, 50%);
-      color: lighten($black, 50%);
-      position: relative;
-      display: inline-block;
-      border-radius: 50%;
-      &::after,
-      &::before {
-        content: '';
-        display: block;
-        width: 5px;
-        height: 5px;
-        background-color: currentColor;
-        position: absolute;
-        border-radius: 50%;
-      }
-      &::before {
-        left: -10px;
-      }
-      &::after {
-        right: -10px;
-      }
-    }
-  }
+  
   .menu-content {
     text-align: right;
     position: absolute;
