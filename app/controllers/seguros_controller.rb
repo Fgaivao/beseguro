@@ -1,5 +1,6 @@
 class SegurosController < ApplicationController
   before_action :set_seguro, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :edit, :update, :destroy]
 
   # GET /seguros
   # GET /seguros.json

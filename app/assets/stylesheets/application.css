@@ -20,9 +20,21 @@
   text-decoration: none;
  }
 
+.btn {
 
+  overflow: hidden;
+  position:fixed;
+  top: 72%;
+  z-index:5;
+}
+.spinEffect{
+   transform: rotate(180deg);
+   -webkit-transform: rotate(180deg);
+   -ms-transform: rotate(180deg);
+   transition-timing: ease-in-out;
+}
 .topnav {
-  margin-left: 700px;
+
   float: right;
   overflow: hidden;
   background-color: rgb(0, 107, 255);
@@ -71,7 +83,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: auto) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;

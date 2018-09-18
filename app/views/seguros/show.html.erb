@@ -21,6 +21,9 @@
       </div>
     </div>
   </div>
+</span>
+</div>
+
 
 <% if @admin_signed_in %>
 <%= link_to 'Edit', edit_seguro_path(@seguro) %>
@@ -37,3 +40,28 @@
     </a>
   </div>
   </div>
+
+  <div class="tform">
+
+<h2>Interessado?</h2><br>
+<h3>Preencha o Formulário e nós entraremos em contacto consigo o mais breve possível</h3>
+</div>
+
+<div class="form">
+
+    <form action="https://formspree.io/francisco.gaivao@outlook.com"
+      method="POST">
+      <h5 style="text-align: center;">Seguro</h5>
+      <input class="in" type="text" name="seguro" value="<%= @seguro.name %>"><br>
+      <h5 style="text-align: center;">Nome</h5>
+      <input class="in" type="text" name="name" required><br>
+      <h5 style="text-align: center;">Email</h5>
+    <input class="in" type="email" name="_replyto" required><br>
+    <h5 style="text-align: center;">Observação</h5>
+      <input class="in" type="text"  name="observação" style="height: 100px; width: 250px; word-break: break-all;"><br>
+      <input class="check" type="checkbox" name="rgpd" value="aceito" required> &nbsp&nbsp&nbsp Aceito que a Bé Seguro trate <br>os meus dados pessoais para uso exclusivo comercial<br>
+      <input type="hidden" name="_next" value="http://localhost:3000" />
+    <input style= "margin: 40px; cursor: pointer;" type="submit" value="Enviar">
+</form>
+</div>
+
