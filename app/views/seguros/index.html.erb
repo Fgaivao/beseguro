@@ -1,16 +1,17 @@
 <p id="notice"><%= notice %></p>
+<h1 style="text-align:center; color: white; padding: 50px;font-size: 50px; background-color:rgb(239, 142, 105); font-weight: 900; box-shadow: 10px 10px 5px gray">Campanhas</h1>
 
 
 <% @seguros.each do |seguro| %>
 
-
+<%= link_to seguro do %>
 <div class="example-2 card">
 
   <div class="wrapper">
     <%= image_tag seguro.image.thumb.url%>
     <div class="header" style="font-size: 50px;">
       <%= seguro.name %>
-
+<% end %>
 
           </span>
           <div class="white" style="float: right; position: relative; width: 30%;">
@@ -25,13 +26,13 @@
       </div>
     </div>
   </div>
+
 <% if admin_signed_in? %>
 
 <%= link_to 'Edit', edit_seguro_path(seguro) %>
 <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <% end %>
-<%= link_to 'Ver Mais', seguro %>
 </div>
 <% end %>
 </div>
@@ -42,7 +43,7 @@
 
 <br>
 <% if admin_signed_in? %>
-<%= link_to 'New Seguro', new_seguro_path %>
+
   <%= link_to('Logout', destroy_admin_session_path, method: :delete) %>
 
 <% end %>
@@ -51,20 +52,36 @@
 
 
 
-
+<% if admin_signed_in? %>
 <%= link_to 'New Seguro', new_seguro_path %>
+<% end %>
 
+<div style= "text-align: left">
+
+<button id="btn" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo"><i class="fas fa-arrow-right" style="font-size: 50px;"></i></button>
+</div>
+<div id="demo" class="collapse">
 <div class="topnav" id="myTopnav">
   <div class="w3-container w3-center w3-animate-left">
     <%= link_to "Home", root_path%>
-    <%= link_to "Seguros", seguros_path, :class => "active"%>
+    <%= link_to "Campanhas", seguros_path, :class => "active"%>
     <%= link_to "Contactos", teams_path%>
-    <a href="#about">About</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 </div>
+</div>
+
+<script>
+$(function(){
+  $("#btn").click(function(){
+    /*//Animação com loop infinito (até clicar)
+    $("#d2").toggleClass("rotating");*/
+    $("#btn").toggleClass("spinEffect");
+  });
+});
+</script>
 
 
 

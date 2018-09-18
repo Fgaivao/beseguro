@@ -14,3 +14,12 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(function(){
+  $("#btn").click(function(){
+    /*//Animação com loop infinito (até clicar)
+    $("#d2").toggleClass("rotating");*/
+    $("#btn").toggleClass("spinEffect");
+  });
+});
+
