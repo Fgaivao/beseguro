@@ -1,5 +1,22 @@
 <p id="notice"><%= notice %></p>
 
+        <nav class="navbar navbar-default" role="navigation">
+
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-brand-centered" style="position: fixed; background-color: white; width: 100%;">
+          <ul class="nav navbar-nav" style="display: block;">
+            <li><%= image_tag ("logoaz.png"), :style => ("height: 60px; width: 120px; margin-right: 420px;")%></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><%= link_to "Campanhas", seguros_path%></li>
+            <li><a href="#">Equipa</a></li>
+            <li><%= link_to "Contactos", teams_path%></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
 <div class="example-2 card">
 
   <div class="wrapper">
@@ -29,17 +46,8 @@
 <%= link_to 'Edit', edit_seguro_path(@seguro) %>
 <% end %>
 <%= link_to 'Back', seguros_path %>
-<div class="topnav" id="myTopnav">
-    <div class="w3-container w3-center w3-animate-left">
-    <%= link_to "Home", root_path%>
-    <%= link_to "Seguros", seguros_path, :class => "active"%>
-    <%= link_to "Contactos", teams_path%>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-  </div>
+
+
 
   <div class="tform">
 
@@ -47,12 +55,14 @@
 <h3>Preencha o Formulário e nós entraremos em contacto consigo o mais breve possível</h3>
 </div>
 
+<%= link_to "Download", "/Horario 2018.pdf" %>
+
 <div class="form">
 
     <form action="https://formspree.io/francisco.gaivao@outlook.com"
       method="POST">
       <h5 style="text-align: center;">Seguro</h5>
-      <input class="in" type="text" name="seguro" value="<%= @seguro.name %>"><br>
+      <input style = "display:none" class="in" type="text" name="seguro" value="<%= @seguro.name %>"><br>
       <h5 style="text-align: center;">Nome</h5>
       <input class="in" type="text" name="name" required><br>
       <h5 style="text-align: center;">Email</h5>
@@ -60,6 +70,8 @@
     <h5 style="text-align: center;">Observação</h5>
       <input class="in" type="text"  name="observação" style="height: 100px; width: 250px; word-break: break-all;"><br>
       <input class="check" type="checkbox" name="rgpd" value="aceito" required> &nbsp&nbsp&nbsp Aceito que a Bé Seguro trate <br>os meus dados pessoais para uso exclusivo comercial<br>
+      <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
       <input type="hidden" name="_next" value="http://localhost:3000" />
     <input style= "margin: 40px; cursor: pointer;" type="submit" value="Enviar">
 </form>
