@@ -27,14 +27,15 @@
   border: 0px !important;
 }
 
-li{
-  font-size: 25px;
-  color: white !important;
-  /*margin-right: 40px;*/
 
-  margin-top:20px;
 
+.footer{
+  background-color: #22282e;
+  color: white;
+  margin-top: 100px;
 }
+
+
 
 
 

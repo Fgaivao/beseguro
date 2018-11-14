@@ -1,39 +1,21 @@
 // Place all the styles related to the seguros controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
-// Variables
-$regal-blue: #034378;
-$san-juan: #2d4e68;
-$bermuda: #77d7b9;
-$white: #fff;
-$black: #000;
-// clear-fix mixin
-@mixin cf {
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-  }
-  &::after {
-    clear: both;
-  }
-}
 
-* {
-  box-sizing: border-box;
-}
 
 body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
 
+}
+
+.style_image{
+  width: 100%;
 }
 
 a {
   text-decoration: none;
+
 }
 
 h1 {
@@ -41,18 +23,32 @@ h1 {
   font-weight: 300;
 }
 
+span{
+  color: #206ca3;
+  cursor: pointer;
+}
+span:hover{
+  color: blue
+}
 
 
-  .author {
+  #name{
+    display: inline !important;
+    margin-left: 30px;
     font-size: 17px;
-    float: right;
+
   }
-  .title {
-    margin-top: 10px;
+
+  ul{
+    list-style-type: none;
   }
-  .text {
-    height: 70px;
-    margin: 0;
+
+  li{
+    color: black !important;
+    display: block !important;
+  }
+  #nav a{
+    color: white !important;
   }
 
 
@@ -90,4 +86,5 @@ h1 {
   margin-right: 300px;
 
 }
+
 

@@ -11,11 +11,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div style="position: fixed; background-color: transparent;">
           <ul class="nav navbar-nav" style="display: block;">
-            <li><%= image_tag ("logoaz.png"), :style => ("height: 60px; width: 120px; margin-right: 420px;")%></li>
-            <li><a href="#">Sobre Nós</a></li>
-            <li><%= link_to "Campanhas", seguros_path%></li>
-            <li><a href="#">Equipa</a></li>
-            <li><%= link_to "Contactos", teams_path%></li>
+            <li id= 'nav'><%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px")%></li>
+            <li id= 'nav'><a href="#">Sobre Nós</a></li>
+            <li id= 'nav'><%= link_to "Produtos", seguros_path%></li>
+            <li id= 'nav'><a href="#">Equipa</a></li>
+            <li id= 'nav'><%= link_to "Contactos", teams_path%></li>
           </ul>
         </div><!-- /.navbar-collapse -->
 
@@ -29,42 +29,44 @@
 
 
 
-  <div style="text-align: center;">
-  <%= image_tag ("lisboa1.jpg"), :class => "ban", :style => "height: 80%; width: 100%; postion:relative; " %>
-  <!-- <btn class="btn-primary" style="color: white; padding-top: 10px; padding-bottom: 10px; padding-right: 25px;padding-left: 25px; font-size: 20px; border: 2px solid white; position: absolute; top:80%; border-radius: 5px; ">Campanhas</btn> -->
-  <!-- <div class="w3-container w3-center w3-animate-left"> -->
+  <div style="text-align: center; ">
+  <%= image_tag ("lisboa1.jpg"), :class => "ban", :style => "height: 80%; width: 100%; " %>
+
   </div>
-  <!--  <script>
-     $(window).scroll(function(){
-    $(".ban").css("opacity", 1 - $(window).scrollTop() / 550);
-  });
-   </script> -->
 
-<!-- </div> -->
+
+
 
 </div>
-<!-- <script>
-$(function(){
-  $("#btn").click(function(){
-    /*//Animação com loop infinito (até clicar)
-    $("#d2").toggleClass("rotating");*/
-    $("#btn").toggleClass("spinEffect");
-  });
-});
-</script> -->
 
 
-  <div class="scroll-downs" style="margin-top: 50px;">
-  <div class="mousey">
-    <div class="scroller"></div>
+<div style="position:relative">
+<h2 style="margin-left: 50px; margin-top: 50px;">Sobre Nós</h2>
+<hr style= "color: black; height: 30px !important; size= '50';">
+<p class= "ab" style="margin-left: 50px; font-size: 17px; line-height: 1.6; font-weight: lighter; margin-right: 50px; ">A Bé Seguro foi fundada em 1980 em Lisboa, com o objectivo de aproximar as pessoas, empresas e associações das soluções ideais para cada caso. A nossa carteira abrange clientes em todo o território nacional, e de todas as áreas, o que faz com que tenhamos conhecimentos nas mais variadas actividades, desde seguros relacionados com a agricultura, comércio e industriais, patrimoniais ou pessoais.
+
+Contamos com muitos anos de experiência neste sector, o que nos permite conhecer os produtos a fundo e reconhecer as melhores oportunidades criadas por cada alteração no mercado.
+
+Trabalhamos de forma sinergética com as seguradoras, para garantir que os seguros colocados por nosso intermédio satisfaçam as necessidades dos nossos clientes, bem como para uma resolução rápida e eficaz em caso de sinistro.
+
+Contamos com uma equipa que se orgulha da sua relação de proximidade com os segurados promovendo um acompanhamento permanente.</p>
+</div>
+
+
+
+
+<div class='footer' style="text-align: center; padding-top: 20px; padding-bottom: 30px;">
+  <div>
+  <h2 style="margin-bottom: 40px;">Contactos</h2>
+  <i class="fas fa-map-marker-alt" style= "font-size: 30px;"></i>
+  <h5 style="text-align: center;">Av. 24 de Julho 1 - 2º Esq. <br>1200-478 Lisboa<h5>
+    <div>
+    <i class="fas fa-envelope" style= "font-size: 30px;"></i>
+  <h5>geral@be-seguro.com</h5>
+  <i class="fas fa-phone" style= "font-size: 30px;"></i>
+  <h5>+351 214 585 270</h5>
+
+  <div>
   </div>
-</div>
-
-<div>
-<h1 style="text-align:center; color: white; padding: 50px; margin-top: 80px; font-size: 50px; background-color:rgb(239, 142, 105); font-weight: 900; box-shadow: 10px 10px 5px gray">Sobre Nós</h1>
-</div>
 
 
-
-
-<p>

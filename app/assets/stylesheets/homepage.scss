@@ -1,8 +1,23 @@
 // Place all the styles related to the homepage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-a{
-  color: white !important;
+#nav a{
+  color: white ;
 
 
 }
+.ab{
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+li{
+  font-size: 25px;
+  color: white !important;
+  /*margin-right: 40px;*/
+
+  margin-top:20px;
+
+}
+
+
