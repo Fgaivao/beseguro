@@ -9,15 +9,16 @@
 
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div style="position: fixed; background-color: transparent;">
-          <ul class="nav navbar-nav" style="display: block;">
-            <li id= 'nav'><%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px")%></li>
-            <li id= 'nav'><a href="#">Sobre Nós</a></li>
-            <li id= 'nav'><%= link_to "Produtos", seguros_path%></li>
-            <li id= 'nav'><a href="#">Equipa</a></li>
-            <li id= 'nav'><%= link_to "Contactos", teams_path%></li>
+           <div style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important;">
+          <ul  class="nav navbar-nav" style="display: block; ">
+            <li id='nav'><%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px")%></li>
+            <li id='nav'><%= link_to "Sobre Nós", root_path%></li>
+            <li id='nav'><%= link_to "Produtos", seguros_path%></li>
+            <li id='nav'><a href="#">Equipa</a></li>
+            <li id='nav'><%= link_to "Contactos", teams_path%></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
+        </div>
+
 
 
 

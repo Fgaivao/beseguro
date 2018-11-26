@@ -1,6 +1,6 @@
 
-        <div style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px;">
-          <ul  class="nav navbar-nav" style="display: block;">
+        <div style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important;">
+          <ul  class="nav navbar-nav" style="display: block; ">
             <li id='nav'><%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px")%></li>
             <li id='nav'><%= link_to "Sobre Nós", root_path%></li>
             <li id='nav'><%= link_to "Produtos", seguros_path%></li>
@@ -15,28 +15,74 @@
 
   </div>
 
-  <div style="margin-left: 50px; margin-top: 100px;">
+  <div style="margin-left: 30px; margin-top: 100px;">
   <h3 style="margin-bottom: 30px">Soluções</h3>
 
 <p id="notice"><%= notice %></p>
    </div>
 
- <% @seguros.each do |seguro| %>
-  <%= link_to seguro do %>
 
-          <span id='name'><%= seguro.name %></span>
+<div class="container">
+  <div class="row">
+    <div class="col-sm" style="text-align:center;">
+<h3>Empresas</h3>
 
+
+
+
+<% @seguros.each do |seguro| %>
+
+ <%= link_to seguro do %>
+
+
+ <% if seguro.tipo == 'Empresa'   %>
+    <span style="display:block; text-align:center;"><%= seguro[:name] %></span>
+  <% end %>
 <% end %>
 
-<% if admin_signed_in? %>
 
-<%= link_to 'Edit', edit_seguro_path(seguro) %>
-<%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if admin_signed_in? %>
 
+    <%= link_to 'Edit', edit_seguro_path(seguro) %>
+    <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 <% end %>
 
-<% end %>
+</div>
 
+
+
+
+
+<div class="col-sm" style="text-align:center;">
+<h3>Privado</h3>
+
+
+
+
+
+<% @seguros.each do |seguro| %>
+    <%= link_to seguro do %>
+
+      <% if seguro.tipo == 'Privado'   %>
+     <span style="display: block;"><%= seguro[:name] %></span>
+      <% end %>
+    <% end %>
+
+  <% if admin_signed_in? %>
+
+      <%= link_to 'Edit', edit_seguro_path(seguro) %>
+      <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
+</div>
+</div>
+</div>
+
+
+
+
+<div>
   <hr>
   <p style="font-size: 20px; margin-left: 50px;">Aqui pode encontrar as soluções para se proteger de todas as imprevisibilidades do dia a dia.<br>
   Soluções para si, para a sua empresa e para a sua família.</p>
@@ -66,8 +112,8 @@
 <%= link_to 'New Seguro', new_seguro_path %>
 <% end %>
 
-
-<div class='footer' style="text-align: center; padding-top: 20px; padding-bottom: 30px;">
+<div>
+<div class='footer' style="text-align: center; padding-top: 20px; padding-bottom: 30px; width: 100%; margin-left: 0 !important">
   <div>
   <h2 style="margin-bottom: 40px;">Contactos</h2>
   <i class="fas fa-map-marker-alt" style= "font-size: 30px;"></i>
@@ -78,8 +124,11 @@
   <i class="fas fa-phone" style= "font-size: 30px;"></i>
   <h5>+351 214 585 270</h5>
 
-  <div>
   </div>
+</div>
+</div>
+</div>
+
 
 
 

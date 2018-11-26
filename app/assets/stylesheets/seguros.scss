@@ -13,10 +13,6 @@ body {
   width: 100%;
 }
 
-a {
-  text-decoration: none;
-
-}
 
 h1 {
 
@@ -50,7 +46,16 @@ span:hover{
   #nav a{
     color: white !important;
   }
-
+#nav a:hover{
+    color: black !important;
+  }
+  #nav a:active{
+    color: blue !important;
+  }
+#drop1{
+  font-size: 20px;
+  padding: 15px;
+}
 
 
 // First example styles
@@ -87,4 +92,7 @@ span:hover{
 
 }
 
+.cont{
+  background-color: #206ca3;
+}
 

@@ -1,34 +1,72 @@
-<div class="wrapper">
-<p id="notice"><%= notice %></p>
+    <div cass="nav">
 
-<h1 style="text-align:center; color: white; padding: 50px;font-size: 50px; background-color:rgb(239, 142, 105); font-weight: 900; box-shadow: 10px 10px 5px gray">Equipa</h1>
+     <div style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index: 3">
+          <ul  class="nav navbar-nav" style="display: block; ">
+            <li id='nav'><%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px;")%></li>
+            <li id='nav'><%= link_to "Sobre Nós", root_path%></li>
+            <li id='nav'><%= link_to "Produtos", seguros_path%></li>
+            <li id='nav'><a href="#">Equipa</a></li>
+            <li id='nav'><%= link_to "Contactos", teams_path%></li>
+          </ul>
+        </div>
+        </div>
 
-<div class="card-1">
+
+  <div class="spacer">
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+</div>
 
 
+
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100%; padding-top: 30px;">
     <% @teams.each do |team| %>
-<% if admin_signed_in? %>
+    <h3 style="margin-top: 0 !important;"><%= team.name %><h3><br>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 100%; text-align: center; position: relative;">
+    <i class="fas fa-book-open" style="font-size: 50px;"></i><br>
+        <p><%= team.description %><br></p>
+    <i class="far fa-envelope" style="font-size: 50px;"></i><br>
+        <h5><%= mail_to team.email %><h5><br>
+    <hr style="margin-bottom: 20px;">
+        <% if admin_signed_in? %>
         <%= link_to 'Show', team %>
         <%= link_to 'Edit', edit_team_path(team) %>
         <%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %><br>
         <% end %>
-        <%= image_tag team.picture.url, :style => "height: 100px; border-radius: 25%; border: solid 2px black; width: auto; margin: 30px;" %><br>
-        <h3><%= team.name %><h3><br>
-          <i class="fas fa-book-open" style="font-size: 50px; color: white;"></i><br>
-        <p style="margin: 20px;"><%= team.description %><br></p>
-        <i class="far fa-envelope" style="font-size: 50px; color: white;"></i><br>
-        <h5><%= mail_to team.email %><h5><br>
-        <hr style="margin-bottom: 20px;">
-    <% end %>
+        <% end %>
+  </div>
 </div>
+
 
 <br>
 <% if admin_signed_in? %>
 <%= link_to 'New Team', new_team_path %>
 <% end %>
+
+
 <div>
+  <div style="text-align: center; margin-top: 200px;">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194.59328434093797!2d-9.14422080449908!3d38.70649916280983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19347dea83b0c7%3A0x219c8e22d0f46730!2sPinto+Basto+-+Navega%C3%A7%C3%A3o%2C+S.a.!5e0!3m2!1spt-PT!2spt!4v1537117725894" width="100%" height="450" frameborder="0" style="border:2px solid gray;" allowfullscreen></iframe>
+</div>
+</div>
 
+<div class='footer' style="text-align: center; padding-top: 20px; padding-bottom: 30px;">
+  <div>
+  <h2 style="margin-bottom: 40px;">Contactos</h2>
+  <i class="fas fa-map-marker-alt" style= "font-size: 30px;"></i>
+  <h5 style="text-align: center;">Av. 24 de Julho 1 - 2º Esq. <br>1200-478 Lisboa<h5>
+    <div>
+    <i class="fas fa-envelope" style= "font-size: 30px;"></i>
+  <h5>geral@be-seguro.com</h5>
+  <i class="fas fa-phone" style= "font-size: 30px;"></i>
+  <h5>+351 214 585 270</h5>
 
-  <div style="text-align: center;">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194.59328434093797!2d-9.14422080449908!3d38.70649916280983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19347dea83b0c7%3A0x219c8e22d0f46730!2sPinto+Basto+-+Navega%C3%A7%C3%A3o%2C+S.a.!5e0!3m2!1spt-PT!2spt!4v1537117725894" width="1000" height="450" frameborder="0" style="border:2px solid gray;" allowfullscreen></iframe>
+  <div>
   </div>
