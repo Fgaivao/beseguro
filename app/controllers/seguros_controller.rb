@@ -61,10 +61,6 @@ class SegurosController < ApplicationController
       format.html { redirect_to seguros_url, notice: 'Seguro was successfully destroyed.' }
       format.json { head :no_content }
     end
-
-    def particulares
-      @particular = @seguro.name_where(tipo: 'Particulares')
-    end
   end
 
 
