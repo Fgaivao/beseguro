@@ -19,6 +19,21 @@
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
  }
+ html {
+  scroll-behavior: smooth;
+}
+
+.carousel-indicators{
+  display: none !important;
+}
+
+table{
+  border-spacing: 20px !important;
+  border-collapse: separate !important;
+}
+.ft{
+  text-align:center;
+}
 
 
 
@@ -29,10 +44,64 @@
   margin-top: 100px;
 }
 
+.field{
+  width: 100%;
+}
+.procurar{
+  text-align:center;
+  margin-top: 30px;
+}
 
+.searchbutton{
+  color: white;
+  background-color: #22282e;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 10px;
+  transition:0.2s;
+}
 
+.searchbutton:hover{
+background-color: #246ca3;
+  }
 
+.searchfield{
+  width: 30%;
+  padding: 10px;
+  border-radius: 25px;
+}
 
+input, textarea, select {
+    outline: none;
+}
 
+.seguroname{
+font-size: 18px;
+color:black !important;
+margin-top: 20px;
+
+}
+
+.enviar{
+  color: white;
+  width:40%;
+  background-color: #22282e;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 25px;
+  margin-top: 20px;
+  padding: 10px;
+  transition:0.2s;
+}
+
+.enviar:hover{
+  background-color: #246ca3;
+}
+
+#seguroslista{
+  border-right: 1px solid gray;
+}
 
 

@@ -3,23 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #nav a{
   color: white ;
-  display: inline-block
-
-
-}
-.ab{
-  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-}
-li{
   display: inline-block;
-  font-size: 25px;
+  padding-top: 30px;
+  transition: 0.2s;
+
+
+}
+
+ul{
+  display: table;
+  width:100%;
+}
+li + li{
+  display: table-cell;
+  font-size: 20px;
   color: white !important;
+  margin-right: 90px;
   /*margin-right: 40px;*/
+}
 
-  margin-top:20px;
-
+li .logo{
+margin-top: 20px !important;
 }
 
 

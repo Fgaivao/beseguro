@@ -9,6 +9,7 @@ body {
 
 }
 
+
 .style_image{
   width: 100%;
 }
@@ -39,23 +40,18 @@ span:hover{
     list-style-type: none;
   }
 
-  li{
+  li .seguro{
     color: black !important;
     display: block !important;
   }
   #nav a{
-    color: white !important;
+    color: white;
+    transition: 2s;
   }
 #nav a:hover{
-    color: black !important;
+    border-bottom: 1px solid white;
+    background-color:transparent !important;
   }
-  #nav a:active{
-    color: blue !important;
-  }
-#drop1{
-  font-size: 20px;
-  padding: 15px;
-}
 
 
 // First example styles

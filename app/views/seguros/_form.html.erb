@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: seguro, local: true) do |form| %>
   <% if seguro.errors.any? %>
     <div id="error_explanation">
@@ -28,10 +30,11 @@
 
   <div class="field">
     <%= form.label :tipo %>
-    <%= form.text_field :tipo %>
+    <%= form.select :tipo, ['Particular', 'Empresa', 'Oferta']%>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
