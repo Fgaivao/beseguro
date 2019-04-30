@@ -1,0 +1,32 @@
+<div style="position:absolute;">
+
+  <h1 style="margin-top: 100px;">Say Hello</h1>
+
+  </div>
+
+  <div class="contactform" style="position:absolute; top: 40%;">
+
+    <%= form_for @contact do |f| %>
+
+    <%= f.label :name %><br>
+    <%= f.text_field :name, required: true  %><br>
+
+    <%= f.label :email %><br>
+    <%= f.email_field :email, required: true  %><br>
+
+    <%= f.label :message %><br>
+    <%= f.text_area :message, as: :text, required: true  %><br>
+
+    <div class="hidden">
+
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nickname, hint: "leave this field blank"  %><br>
+
+    </div>
+
+    <%= f.submit 'Enviar Mensagem', class: 'button' %>
+
+    <% end %>
+
+
+  </div>
