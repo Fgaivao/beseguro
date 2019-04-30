@@ -9,14 +9,7 @@
 
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-           <div style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important;">
-          <ul  class="nav navbar-nav" style="display: block; ">
-            <li class="logo" id='nav'><%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px; padding-top: 10px;")%></li>
-            <li id='nav'><a class="smoothscroll" href="#sobrenos"> Sobre Nós</a></li>
-            <li id='nav'><%= link_to "Produtos", seguros_path%></li>
-            <li id='nav'><%= link_to "Contactos", teams_path%></li>
-          </ul>
-        </div>
+
 
 
 
@@ -59,17 +52,60 @@
   <h3 style="text-align: center;">Todos Nós... A trabalhar para a sua segurança</h3>
 
   </div>
+
+
+
+<script type='text/javascript'>
+$(function(){
+var overlay = $('<div id="overlay"></div>');
+overlay.show();
+overlay.appendTo(document.body);
+$('.popup').show();
+$('.close').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+
+
+
+
+$('.x').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+});
+</script>
+<div class='popup'>
+<div class='cnt223'>
+
+  <h1>Seguro da Semana</h1>
 <% @seguros.each do |seguro| %>
 
  <%= link_to seguro do %>
 
 
  <% if seguro.tipo == 'Oferta'   %>
-    <span style="display:block; text-align:center;"><%= seguro[:name] %></span>
+    <button class="poptxt" style="display:block; text-align:center;"><%= seguro[:name] %></button>
+    <p style="margin-top:30px;">Aproveite a nova campanha!</p>
   <% end %>
 <% end %>
 
 <% end %>
+<br/>
+<br/>
+<a href='' class='close'>X</a>
+</p>
+</div>
+</div>
+
+
+
+
+
+
+
 
 
 
