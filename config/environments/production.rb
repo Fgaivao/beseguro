@@ -93,7 +93,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = {host: 'http://beseguro.herokuapp.com' }
-  config.action_mail.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
   :user_name => ENV['SENDGRID_USERNAME'],
