@@ -3,7 +3,6 @@ class SegurosController < ApplicationController
   before_action :authenticate_admin!, only: [:new, :edit, :update, :destroy]
 
 
-
   # GET /seguros
   # GET /seguros.json
   def index
@@ -68,6 +67,9 @@ class SegurosController < ApplicationController
   def homepage
   @seguros = Seguro.all
   end
+
+      def solucoes
+    end
 
 
 

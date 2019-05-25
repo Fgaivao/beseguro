@@ -1,4 +1,5 @@
 class Seguro < ApplicationRecord
+
   mount_uploader :image, ImageUploader
 
   def self.search(search)

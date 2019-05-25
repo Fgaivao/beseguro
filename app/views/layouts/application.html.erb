@@ -27,21 +27,67 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <div style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important;">
+    <div class="navbardes" style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important; font-size: 50px;">
           <ul  class="nav navbar-nav" style="display: block; float:right; ">
             <span><%= link_to root_path do %> <%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px; padding-top: 10px;float:left")%><% end %></span>
-            <li id='nav'><a style="font-size:20px; margin-right: 90px;" class="smoothscroll" href="#sobrenos"> Sobre Nós</a></li>
-            <li id='nav'><%= link_to "Produtos", seguros_path%></li>
-            <li id='nav'><%= link_to "Contactos", teams_path%></li>
+            <li id='nav'><a style="font-size:20px; margin-right: 90px;" class="smoothscroll" href="/#sobrenos"> Sobre Nós</a></li>
+            <li id='nav'><%= link_to "Produtos", solucoes_path%></li>
+            <li id='nav'><%= link_to "Contactos", contacts_path%></li>
+            <li id="navmobile"> <i class="fa fa-bars"></i></li>
+  </a>
           </ul>
         </div>
 
+
+
+
+        <script>
+$(document).ready(function() {
+
+            $('.navmobileanchor').hide();
+
+            $("#navmobile").click(function(){
+               $(".navmobileanchor").toggle( 'slow', function(){
+               });
+            });
+         });
+</script>
   </head>
 
   <body>
+    <ul  class="navmobileanchor" style="position: absolute; margin-top: 100px;">
+            <li id='mb'> Sobre Nós</li>
+            <li id='mb' style="color:white !important;"><%= link_to "Produtos", solucoes_path%></li>
+            <li id='mb'><%= link_to "Contactos", contacts_path%></li>
+          </ul>
 
     <%= yield %>
 
 
   </body>
+   <div style="background-color: #22282e">
+
+<div class='footer' style="text-align: center; padding-top: 20px;">
+
+  <h2 style="margin-bottom: 40px;">Contactos</h2>
+  <table align= "center" style="width: 50%;">
+    <tbody>
+      <tr>
+
+    <th class="ft">
+    <i class="fas fa-envelope" style= "font-size: 20px;"></i>
+  <h5 style="text-align: center;">geral@be-seguro.com</h5>
+</th>
+<th class="ft" style="color: white;">
+  <i class="fas fa-map-marker-alt" style= "font-size: 20px;"></i>
+  <h5 style="text-align: center;">Av. 24 de Julho 1 - 2º Esq. <br>1200-478 Lisboa</h5>
+    </th>
+  <th class="ft">
+  <i class="fas fa-phone" style= "font-size: 20px;"></i>
+  <h5 style="text-align: center;">+351 214 585 270</h5>
+</th>
+</tr>
+  </table>
+  </div>
+  </div>
 </html>

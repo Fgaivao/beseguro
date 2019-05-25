@@ -72,11 +72,22 @@ span:hover{
   padding-top: 50px;
 }
 .in{
-  height: 30px;
-  width: 200px;
-  margin: 20px;
-  border-radius: 5%;
-  font-size: 16px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.inmes{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .check{
@@ -93,4 +104,25 @@ span:hover{
 .cont{
   background-color: #206ca3;
 }
+
+.searchfield{
+  margin-top:200px;
+  text-align:center;
+  width:80%;
+  padding: 10px;
+  border-radius: 25px;
+  color: white !important;
+  animation: none;
+}
+
+button a{
+  margin-top:200px;
+  text-align:center;
+  width:80%;
+  padding: 10px;
+  border-radius: 25px;
+  color: white !important;
+  animation: none;
+}
+
 
