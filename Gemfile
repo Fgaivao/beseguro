@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "devise"
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
-gem 'ffi', '~> 1.9', '>= 1.9.10'
+gem 'ffi', '~> 1.11.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
