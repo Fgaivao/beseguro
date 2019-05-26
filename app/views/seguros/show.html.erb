@@ -26,7 +26,7 @@
 
 
 
-  <div class="tform">
+  <div class="tform" style="margin-bottom:100px;">
 
     <p>Preencha o formulário e envie-nos para o email indicado</p>
 
@@ -34,33 +34,11 @@
 <div class="form">
 
 <div class="sform" style="width:70%; margin: auto;">
-    <%= render "contacts/form",
-           :contact => @contact %>
+    <%= render "formseguro",
+           :segurocontact => @segurocontact %>
 </div>
 
 </div>
 
-
-<div class='footer' style="text-align: center; padding-top: 20px; padding-bottom: 30px;">
-
-  <h2 style="margin-bottom: 40px;">Contactos</h2>
-  <table align= "center">
-    <tbody>
-      <tr>
-  <th class="ft" style="color: white;">
-  <i class="fas fa-map-marker-alt" style= "font-size: 20px;"></i>
-  <h5>Av. 24 de Julho 1 - 2º Esq. <br>1200-478 Lisboa</h5>
-    </th>
-    <th class="ft">
-    <i class="fas fa-envelope" style= "font-size: 20px;"></i>
-  <h5>geral@be-seguro.com</h5>
-</th>
-  <th class="ft">
-  <i class="fas fa-phone" style= "font-size: 20px;"></i>
-  <h5>+351 214 585 270</h5>
-</th>
-</tr>
-  </table>
-  </div>
 </div>
 

@@ -71,6 +71,21 @@ class SegurosController < ApplicationController
       def solucoes
     end
 
+    def segurocontactnew
+    @segurocontact = SeguroContact.new
+  end
+
+  def segurocontactcreate
+    @segurocontact = SeguroContact.new(params[:contact])
+    @segurocontact.request = request
+    if @segurocontact.deliver
+      flash.now[:error] = nil
+    else
+      flash.now[:error] = "Erro"
+      render :new
+    end
+  end
+
 
 
 

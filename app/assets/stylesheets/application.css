@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
+html, body {
+    height: 100%;
+}
+.home{
+  height: 100%;
+}
 
  * {
   font-family: 'Montserrat', sans-serif;
@@ -23,6 +28,7 @@
   margin: 0 !important;
   scroll-behavior: smooth;
 }
+
 
 .carousel-indicators{
   display: none !important;
@@ -38,19 +44,16 @@ table{
 }
 
 
-.footer{
+footer{
   position:absolute;
   width:100%;
   background-color: #22282e;
   color: white !important;
-  margin-top: 100px;
+  margin-bottom: 0%;
+  top: auto !important;
 }
-@media screen and (max-width: 650px) {
- .footer {
-  bottom: 0;
-  }
 
-}
+
 
 .field{
   width: 100%;

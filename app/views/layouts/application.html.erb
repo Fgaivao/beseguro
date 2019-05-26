@@ -27,7 +27,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <div class="navbardes" style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important; font-size: 50px;">
+    <div class="navbardes" style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important; font-size: 50px; margin-top: 0">
           <ul  class="nav navbar-nav" style="display: block; float:right; ">
             <span><%= link_to root_path do %> <%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px; padding-top: 10px;float:left")%><% end %></span>
             <li id='nav'><a style="font-size:20px; margin-right: 90px;" class="smoothscroll" href="/#sobrenos"> Sobre Nós</a></li>
@@ -63,11 +63,9 @@ $(document).ready(function() {
 
     <%= yield %>
 
+ <div style="background-color: #22282e">
 
-  </body>
-   <div style="background-color: #22282e">
-
-<div class='footer' style="text-align: center; padding-top: 20px;">
+<footer style="text-align: center; padding-top: 20px;">
 
   <h2 style="margin-bottom: 40px;">Contactos</h2>
   <table align= "center" style="width: 50%;">
@@ -88,6 +86,8 @@ $(document).ready(function() {
 </th>
 </tr>
   </table>
+  </footer>
   </div>
-  </div>
+  </body>
+
 </html>
