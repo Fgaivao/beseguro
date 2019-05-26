@@ -1,4 +1,6 @@
-<div>
+
+<div style="height:100%">
+  <div>
     <%= image_tag @seguro.image.thumb.url, :class => "style_image"%>
   </div>
 
@@ -34,11 +36,12 @@
 <div class="form">
 
 <div class="sform" style="width:70%; margin: auto;">
-    <%= render "formseguro",
+    <%= render "contacts/form",
            :segurocontact => @segurocontact %>
 </div>
 
 </div>
 
 </div>
+
 

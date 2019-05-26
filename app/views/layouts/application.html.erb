@@ -29,11 +29,11 @@
 
     <div class="navbardes" style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important; font-size: 50px; margin-top: 0">
           <ul  class="nav navbar-nav" style="display: block; float:right; ">
-            <span><%= link_to root_path do %> <%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px; padding-top: 10px;float:left")%><% end %></span>
+            <span><%= link_to root_path do %> <%= image_tag ("logoaz.png"), :class => ('logo'), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px; padding-top: 10px;float:left")%><% end %></span>
             <li id='nav'><a style="font-size:20px; margin-right: 90px;" class="smoothscroll" href="/#sobrenos"> Sobre Nós</a></li>
             <li id='nav'><%= link_to "Produtos", solucoes_path%></li>
             <li id='nav'><%= link_to "Contactos", contacts_path%></li>
-            <li id="navmobile"> <i class="fa fa-bars"></i></li>
+            <li id="navmobile" style="font-size:50px;"> <i class="fa fa-bars"></i></li>
   </a>
           </ul>
         </div>

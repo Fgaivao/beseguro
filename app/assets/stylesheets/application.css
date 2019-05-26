@@ -19,6 +19,11 @@ html, body {
 .home{
   height: 100%;
 }
+@media screen and (max-width: 1252px) {
+.logo{
+ margin-right: 70% !important;
+}
+}
 
  * {
   font-family: 'Montserrat', sans-serif;
@@ -45,6 +50,7 @@ table{
 
 
 footer{
+  margin-top:100px;
   position:absolute;
   width:100%;
   background-color: #22282e;
