@@ -69,6 +69,14 @@ class SegurosController < ApplicationController
   end
 
       def solucoes
+
+    end
+
+    def negocios
+      @seguros = Seguro.all
+
+
+
     end
 
 

@@ -1,0 +1,27 @@
+<div style="height: 100%;">
+
+
+
+
+<div style="padding-top: 200px;">
+  <div class="container">
+    <ul>
+     <li> <% @seguros.where(tipo: 'Negocio').each do |seguro| %>
+
+ <%= link_to seguro do %>
+
+   <h1 style=" position:absolute; color: white; font-size: 70px; font-weight: 900; text-shadow: 2px 2px black"><%= seguro[:name] %></h1><%= image_tag seguro.image.thumb.url, :class => "style_image" %>
+   <% end %>
+  <% end %>
+</li>
+   </ul>
+
+
+</div>
+
+
+
+
+
+
+</div>

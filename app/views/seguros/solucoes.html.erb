@@ -1,10 +1,16 @@
-<div class="solucoes" style="height:100%;">
+
 
 <div style="text-align: center; ">
-  <%= image_tag ("solution.jpg"), :class => "ban", :style => "height: 500px; width: 100%; " %>
+  <%= image_tag ("sol.jpg"), :class => "ban", :style => "width: 100%;
+        object-fit: cover;
+        max-height:800px;
+        overflow: hidden;
+        margin-top: 0; " %>
+
+        <h1 style="margin-top: -30%; color: white; font-weight: bold; text-shadow: 1px 1px black; font-size: 80px;">Soluções</h1>
 
   </div>
-   <div style="margin-top:10%"">
+   <div style="margin-top:30%; ">
 
   <div style="margin-left: 50px; margin-top: 100px;">
   <h3 style="margin-bottom: 30px">Soluções</h3>
@@ -19,6 +25,11 @@
   <div style="text-align:center;">
 
   <button class="searchbutton"><%= link_to "A minha solução", seguros_path%></button>
+
   </div>
+
+
 </div>
-</div>
+
+
+

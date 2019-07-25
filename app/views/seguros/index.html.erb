@@ -25,8 +25,12 @@
 
  <% if seguro.tipo == 'Empresa'   %>
     <span  class="seguroname" style="display:block; text-align:center;"><%= seguro[:name] %></span>
+
+    <% else seguro.tipo != 'Empresa' %>
+
   <% end %>
 <% end %>
+
 
 
 
@@ -50,6 +54,8 @@
 
       <% if seguro.tipo == 'Particular'   %>
      <span class="seguroname" style="display: block;"><%= seguro[:name] %></span>
+
+     <% else seguro.tipo != 'Particular' %>
       <% end %>
     <% end %>
 
@@ -69,12 +75,12 @@
 <br>
 <% if admin_signed_in? %>
 
-  <%= link_to('Logout', destroy_admin_session_path, method: :delete) %>
+ <li> <%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
 
 <% end %>
 
 <% if admin_signed_in? %>
-<%= link_to 'New Seguro', new_seguro_path %>
+<li><%= link_to 'New Seguro', new_seguro_path %></li>
 <% end %>
 
 </div>

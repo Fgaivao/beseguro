@@ -59,6 +59,12 @@ footer{
   top: auto !important;
 }
 
+@media screen and (max-width: 980px) {
+  footer{
+bottom: 0;
+  }
+}
+
 
 
 .field{
@@ -266,6 +272,9 @@ cursor: pointer;
   }
   a{
     color:white !important;
+  }
+  p{
+    font-size: 1.6em !important;
   }
 
 
