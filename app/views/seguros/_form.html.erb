@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: seguro, local: true) do |form| %>
   <% if seguro.errors.any? %>
     <div id="error_explanation">
@@ -12,26 +14,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :nome %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :descrição %>
     <%= form.text_field :description %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
+    <%= form.label :imagem %>
     <%= form.file_field :image %>
   </div>
 
   <div class="field">
     <%= form.label :tipo %>
-    <%= form.text_field :tipo %>
+    <%= form.select :tipo, ['Particular', 'Empresa', 'Oferta', 'Negocio']%>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+

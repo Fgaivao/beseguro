@@ -12,6 +12,7 @@
     <%= favicon_link_tag 'logoaz.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
@@ -23,14 +24,73 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
+    <div class="navbardes" style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important; font-size: 50px; margin-top: 0">
+          <ul  class="nav navbar-nav" style="display: block; float:right; ">
+            <span><%= link_to root_path do %> <%= image_tag ("7.png"), :class => ('logo'), :style => (" width: 190px; margin-right: 120px; margin-left: 40px; padding-top: 20px;float:left")%><% end %></span>
+            <li id='nav'><a style="font-size:20px; margin-right: 90px;" class="smoothscroll" href="/#sobrenos"> Sobre Nós</a></li>
+            <li id='nav'><a style="font-size:20px;"><%= link_to "Produtos", solucoes_path%></li>
+            <li id='nav'><a style="font-size:20px;"><%= link_to "Contactos", contacts_path%></li>
+            <li id='nav'><a style="font-size:20px;"><%= link_to "De Nós Para Si", contacts_path%></li>
+            <li id="navmobile" style="font-size:50px; float:right;"> <i class="fa fa-bars"></i></li>
+  </a>
+          </ul>
+        </div>
+
+
+
+
+        <script>
+$(document).ready(function() {
+
+            $('.navmobileanchor').hide();
+
+            $("#navmobile").click(function(){
+               $(".navmobileanchor").toggle( 'slow', function(){
+               });
+            });
+         });
+</script>
   </head>
 
   <body>
+
+    <ul  class="navmobileanchor" style="position: fixed; margin-top: 100px; float:right;">
+            <li id='mb'> Sobre Nós</li>
+            <li id='mb' style="color:white !important;"><%= link_to "Produtos", solucoes_path%></li>
+            <li id='mb'><%= link_to "Contactos", contacts_path%></li>
+          </ul>
 
     <%= yield %>
 
 
   </body>
+
+
+<footer style="text-align: center; padding-top: 20px; background-color: #22282e;">
+
+  <h2 style="margin-bottom: 40px;">Contactos</h2>
+  <table align= "center" style="width: 50%;">
+    <tbody>
+      <tr>
+
+    <th class="ft">
+    <i class="fas fa-envelope" style= "font-size: 20px;"></i>
+  <h5 style="text-align: center;">geral@be-seguro.com</h5>
+</th>
+<th class="ft" style="color: white;">
+  <i class="fas fa-map-marker-alt" style= "font-size: 20px;"></i>
+  <h5 style="text-align: center;">Av. 24 de Julho 1 - 2º Esq. <br>1200-478 Lisboa</h5>
+    </th>
+  <th class="ft">
+  <i class="fas fa-phone" style= "font-size: 20px;"></i>
+  <h5 style="text-align: center;">+351 214 585 270</h5>
+</th>
+</tr>
+  </table>
+  </footer>
+
+
 </html>

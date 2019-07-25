@@ -1,30 +1,18 @@
+   <div style="height:100%;">
 
-        <div style="position: fixed; width: 100%; background-color: #434f5b; padding-bottom: 20px; z-index:5 !important;">
-          <ul  class="nav navbar-nav" style="display: block; ">
-            <li id='nav'><%= image_tag ("logoaz.png"), :style => ("height: 80px; width: 140px; margin-right: 420px; margin-left: 40px")%></li>
-            <li id='nav'><%= link_to "Sobre Nós", root_path%></li>
-            <li id='nav'><%= link_to "Produtos", seguros_path%></li>
-            <li id='nav'><a href="#">Equipa</a></li>
-            <li id='nav'><%= link_to "Contactos", teams_path%></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-
-
-  <div style="text-align: center; ">
-  <%= image_tag ("solution.jpg"), :class => "ban", :style => "height: 500px; width: 100%; " %>
-
-  </div>
-
-  <div style="margin-left: 30px; margin-top: 100px;">
-  <h3 style="margin-bottom: 30px">Soluções</h3>
-
-<p id="notice"><%= notice %></p>
-   </div>
+   <div style="text-align:center;">
+   <%= form_tag seguros_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search], class: 'searchfield', style: 'color:black !important' %><br>
+    <%= submit_tag "Encontrar o meu seguro", :name => nil, class: 'searchbutton' %>
+  </p>
+<% end %>
+</div>
 
 
 <div class="container">
   <div class="row">
-    <div class="col-sm" style="text-align:center;">
+    <div class="col-sm" id="seguroslista" style="text-align:center;">
 <h3>Empresas</h3>
 
 
@@ -36,16 +24,16 @@
 
 
  <% if seguro.tipo == 'Empresa'   %>
-    <span style="display:block; text-align:center;"><%= seguro[:name] %></span>
+    <span  class="seguroname" style="display:block; text-align:center;"><%= seguro[:name] %></span>
+
+    <% else seguro.tipo != 'Empresa' %>
+
   <% end %>
 <% end %>
 
 
-  <% if admin_signed_in? %>
 
-    <%= link_to 'Edit', edit_seguro_path(seguro) %>
-    <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+
 <% end %>
 
 </div>
@@ -55,7 +43,7 @@
 
 
 <div class="col-sm" style="text-align:center;">
-<h3>Privado</h3>
+<h3>Particular</h3>
 
 
 
@@ -64,8 +52,10 @@
 <% @seguros.each do |seguro| %>
     <%= link_to seguro do %>
 
-      <% if seguro.tipo == 'Privado'   %>
-     <span style="display: block;"><%= seguro[:name] %></span>
+      <% if seguro.tipo == 'Particular'   %>
+     <span class="seguroname" style="display: block;"><%= seguro[:name] %></span>
+
+     <% else seguro.tipo != 'Particular' %>
       <% end %>
     <% end %>
 
@@ -82,53 +72,18 @@
 
 
 
-<div>
-  <hr>
-  <p style="font-size: 20px; margin-left: 50px;">Aqui pode encontrar as soluções para se proteger de todas as imprevisibilidades do dia a dia.<br>
-  Soluções para si, para a sua empresa e para a sua família.</p>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <br>
 <% if admin_signed_in? %>
 
-  <%= link_to('Logout', destroy_admin_session_path, method: :delete) %>
+ <li> <%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
 
 <% end %>
 
 <% if admin_signed_in? %>
-<%= link_to 'New Seguro', new_seguro_path %>
+<li><%= link_to 'New Seguro', new_seguro_path %></li>
 <% end %>
 
-<div>
-<div class='footer' style="text-align: center; padding-top: 20px; padding-bottom: 30px; width: 100%; margin-left: 0 !important">
-  <div>
-  <h2 style="margin-bottom: 40px;">Contactos</h2>
-  <i class="fas fa-map-marker-alt" style= "font-size: 30px;"></i>
-  <h5 style="text-align: center;">Av. 24 de Julho 1 - 2º Esq. <br>1200-478 Lisboa<h5>
-    <div>
-    <i class="fas fa-envelope" style= "font-size: 30px;"></i>
-  <h5>geral@be-seguro.com</h5>
-  <i class="fas fa-phone" style= "font-size: 30px;"></i>
-  <h5>+351 214 585 270</h5>
-
-  </div>
 </div>
-</div>
-</div>
-
 
 
 
