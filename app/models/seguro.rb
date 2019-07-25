@@ -1,5 +1,7 @@
 class Seguro < ApplicationRecord
 
+  has_one :seguroscontact
+
   mount_uploader :image, ImageUploader
 
   def self.search(search)

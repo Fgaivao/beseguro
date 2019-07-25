@@ -36,8 +36,30 @@
 <div class="form">
 
 <div class="sform" style="width:70%; margin: auto;">
-    <%= render "contacts/form",
-           :contact => @contact %>
+    <%= form_for Seguroscontact.new do |f| %>
+
+    <h4 style="margin-bottom:-10px;"><%= f.label :nome %></h4><br>
+    <%= f.text_field :name, required: true, class: 'in'  %><br>
+
+   <h4 style="margin-bottom:-10px;"><%= f.label :email %></h4><br>
+    <%= f.email_field :email, required: true, class: 'in' %><br>
+
+   <h4 style="margin-bottom:-10px;""><%= f.label :mensagem %></h4><br>
+    <%= f.text_area :message, as: :text, required: true, class: 'inmes', rows: '5'  %><br>
+
+    <div class="hidden">
+
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nickname, hint: "leave this field blank"  %><br>
+
+    <%= f.label :nickname %><br>
+    <%= @seguro.name %><br>
+
+    </div>
+
+    <%= f.submit 'Enviar Mensagem', class: 'button enviar' %>
+
+    <% end %>
 </div>
 
 </div>

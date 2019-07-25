@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   get "contacts" => "contacts#new"
   resources :teams, :path => "contactos"
+  resources :seguroscontacts, only: [:new, :create]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
