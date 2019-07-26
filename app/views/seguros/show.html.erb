@@ -46,7 +46,7 @@
 
    <h4 style="margin-bottom:-10px;""><%= f.label :mensagem %></h4><br>
     <%= f.text_area :message, as: :text, required: true, class: 'inmes', rows: '5'  %><br>
-    <div >
+    <div style="visibility: hidden;">
     <%= f.text_area :seguro, value: @seguro.name %><br>
   </div>
     <div class="hidden">
