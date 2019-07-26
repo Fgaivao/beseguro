@@ -61,8 +61,8 @@
 
   <% if admin_signed_in? %>
 
-      <%= link_to 'Edit', edit_seguro_path(seguro) %>
-      <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <a style="color: black !important;">  <%= link_to 'Edit', edit_seguro_path(seguro) %></a>
+   <a style="color: black !important;">  <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %></a>
   <% end %>
 <% end %>
 </div>

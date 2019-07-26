@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get "/" => "seguros#homepage", :as => "root"
   get "solucoes" => "seguros#solucoes", :as => "solucoes"
-  get "negocios" => "seguros#negocios", :as => "negocios"
+  get "negocios" => "seguros#negocios", :as => "exclusivos"
   devise_for :admins
   get 'seguros/search' => 'seguros#search', as: 'search_seguros'
   get 'seguros/index' => 'seguros#index', as: 'seguros'
