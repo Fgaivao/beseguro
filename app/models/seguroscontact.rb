@@ -4,6 +4,7 @@ class Seguroscontact < MailForm::Base
   attribute :email, :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message, :valitade => true
   attribute :nickname, :captcha => true
+  attribute :seguro
 
 
 
