@@ -57,10 +57,11 @@ $(document).ready(function() {
 
   <body>
 
-    <ul  class="navmobileanchor" style="position: fixed; margin-top: 100px; float:right;">
-            <li id='mb'> Sobre Nós</li>
-            <li id='mb' style="color:white !important;"><%= link_to "Produtos", solucoes_path%></li>
-            <li id='mb'><%= link_to "Contactos", contacts_path%></li>
+    <ul  class="navmobileanchor" style="position: fixed; margin-top: 160px; float:right;">
+            <li  style="font-size: 27px !important; margin-top: 10px" id='mb'> Sobre Nós</li>
+            <li id='mb' style="color:white !important; font-size: 25px !important; margin-top: 10px"><%= link_to "Produtos", solucoes_path%></li>
+            <li  style="font-size: 27px !important; margin-top: 10px" id='mb'><%= link_to "Contactos", contacts_path%></li>
+            <li id='mb' style="font-size: 27px !important;margin-top: 10px"><a style="font-size:27px !important;"><%= link_to "Exclusivos", exclusivos_path%></li>
           </ul>
 
     <%= yield %>
@@ -69,7 +70,7 @@ $(document).ready(function() {
   </body>
 
 
-<footer style="text-align: center; padding-top: 20px; background-color: #22282e;">
+<footer style="text-align: center; padding-top: 20px; background-color: #22282e; ">
 
   <h2 style="margin-bottom: 40px;">Contactos</h2>
   <table align= "center" style="width: 50%;">

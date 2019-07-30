@@ -1,5 +1,5 @@
+<div class="home">
 
-<div style="height:100%">
   <div>
     <%= image_tag @seguro.image.thumb.url, :class => "style_image"%>
   </div>
@@ -35,7 +35,7 @@
 
 <div class="form">
 
-<div class="sform" style="width:70%; margin: auto;">
+<div class="sform" style="width:70%; margin: auto; height: 100%;">
     <%= form_for Seguroscontact.new do |f| %>
 
     <h4 style="margin-bottom:-10px;"><%= f.label :nome %></h4><br>
@@ -65,5 +65,6 @@
 </div>
 
 </div>
+
 
 

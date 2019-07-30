@@ -1,9 +1,9 @@
-<div style="height: 100%;">
+<div class="home">
 
 
 
 
-<div style="padding-top: 200px;">
+<div style="padding-top: 200px; margin-bottom: 200px;">
   <div class="container">
     <ul>
      <li> <% @seguros.where(tipo: 'Negocio').each do |seguro| %>
@@ -12,6 +12,11 @@
 
    <h1 style=" position:absolute; color: white; font-size: 70px; font-weight: 900; text-shadow: 2px 2px black"><%= seguro[:name] %></h1><%= image_tag seguro.image.thumb.url, :class => "style_image" %>
    <% end %>
+   <% if admin_signed_in? %>
+
+    <a style="color: black !important;">  <%= link_to 'Edit', edit_seguro_path(seguro) %></a>
+   <a style="color: black !important;">  <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+  <% end %>
   <% end %>
 </li>
    </ul>
