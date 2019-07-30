@@ -24,7 +24,7 @@ html, body {
  position: relative;
  padding-bottom: 250px; /* height of your footer */
 }
-}
+
 @media screen and (max-width: 1252px) {
 .logo{
  margin-right: 70% !important;
