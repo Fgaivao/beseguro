@@ -13,17 +13,19 @@
 <div class="container" style="margin-bottom: 200px; color:black !important;">
   <div class="row">
     <div class="col-sm" id="seguroslista" style="text-align:center; ">
-<h3>Empresas</h3>
+
+      <ul style="color:black !important;">
+<li><h3 style="margin-bottom: 20px;">Empresas</h3></li>
 
 
 
 
-<ul style="color:black !important;">
-     <li style="color:black !important;"> <% @seguros.where(tipo: 'Empresa').each do |seguro| %>
+
+    <% @seguros.where(tipo: 'Empresa').each do |seguro| %>
 
  <%= link_to seguro do %>
 
-   <li style="color:black !important; text-align:center;"><%= seguro[:name] %></li>
+   <li style="color:black !important; font-size:17px;"><%= seguro[:name] %></li><br>
    <% end %>
    <% if admin_signed_in? %>
 
@@ -41,16 +43,17 @@
 
 
 <div class="col-sm" style="text-align:center;">
-<h3>Particular</h3>
+  <ul style="color:black !important; ">
+<li><h3 style="margin-bottom: 20px;">Particular</h3></li>
 
 
 
-<ul style="color:black !important;">
-     <li style="color:black !important;"> <% @seguros.where(tipo: 'Particular').each do |seguro| %>
+
+     <% @seguros.where(tipo: 'Particular').each do |seguro| %>
 
  <%= link_to seguro do %>
 
-   <li style="color:black !important; text-align:center;"><%= seguro[:name] %></li>
+   <li style="color:black !important; text-align:center; font-size:17px; "><%= seguro[:name] %></li><br>
    <% end %>
    <% if admin_signed_in? %>
 
