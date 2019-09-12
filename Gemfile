@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "devise"
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
