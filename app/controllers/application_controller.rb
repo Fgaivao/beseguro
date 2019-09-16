@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
     end
 
     def set_seguro
-      @seguro = Seguro.find(params[:id])
+      @seguro = Seguro.friendly.find(params[:id])
     end
 end
