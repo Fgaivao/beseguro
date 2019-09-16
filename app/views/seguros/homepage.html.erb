@@ -59,9 +59,9 @@ return false;
 
         <%= link_to seguro do %>
 
-  <% if seguro.tipo == 'Destaque'   %>
+  <% if seguro.destaque == true   %>
     <button class="poptxt" style="display:block; text-align:center;"><%= seguro[:name] %></button>
-    <p style="margin-top:30px;">Aproveite a nova campanha!</p>
+    <p style="margin-top:30px;"><%= seguro.shortdescription %></p>
       <% end %>
     <% end %>
   <% end %>

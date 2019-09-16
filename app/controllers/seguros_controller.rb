@@ -92,6 +92,6 @@ class SegurosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def seguro_params
-      params.require(:seguro).permit(:name, :description, :image, :tipo)
+      params.require(:seguro).permit(:name, :description, :image, :tipo, :destaque, :shortdescription)
     end
 end

@@ -35,7 +35,16 @@
 
   <div class="field">
     <%= form.label :tipo %><br>
-    <%= form.select :tipo, ['Particular', 'Empresa', 'Destaque', 'Negocio']%>
+    <%= form.select :tipo, ['Particular', 'Empresa', 'Negocio']%>
+  </div>
+<div class="field">
+  <%= form.label "Destaque?" %> <br />
+    <%= form.check_box :destaque %> <br />
+    </div>
+
+    <div class="field">
+    <%= form.label :shortdescription %><br>
+    <%= form.text_area :shortdescription, rows: '3', col:'20', class: 'in' %>
   </div>
 
   <div class="actions" style="margin-top:50px;">
