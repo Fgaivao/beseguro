@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.0'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.6'
+#gem 'sqlite3', '~> 1.3.6'
 # Use Puma as the app server
 gem 'pg'
 gem 'puma', '~> 3.11'
@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'cloudinary', '~> 1.9.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -32,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "devise"
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

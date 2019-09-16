@@ -1,4 +1,6 @@
+<div style="height:100%">
 
+  <div style="text-align:center;">
 
 <%= form_with(model: seguro, local: true) do |form| %>
   <% if seguro.errors.any? %>
@@ -13,28 +15,37 @@
     </div>
   <% end %>
 
+  <div style="width: 50%; text-align:center; margin-left: 25%;">
+
   <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :name %>
+    <%= form.label :nome %><br>
+    <%= form.text_field :name, class: 'in' %>
   </div>
 
   <div class="field">
-    <%= form.label :descrição %>
-    <%= form.text_field :description %>
+    <%= form.label :descrição %><br>
+    <%= form.text_area :description, rows: '5', col:'20', class: 'in' %>
   </div>
 
   <div class="field">
-    <%= form.label :imagem %>
-    <%= form.file_field :image %>
+    <%= form.label :imagem %><br>
+    <%= form.file_field :image, style: "margin-left: 30%" %>
+
   </div>
 
   <div class="field">
-    <%= form.label :tipo %>
+    <%= form.label :tipo %><br>
     <%= form.select :tipo, ['Particular', 'Empresa', 'Oferta', 'Negocio']%>
   </div>
 
-  <div class="actions">
+  <div class="actions" style="margin-top:50px;">
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>
+
+</div>
+
+</div>
 

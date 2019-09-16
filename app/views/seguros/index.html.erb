@@ -1,4 +1,4 @@
-   <div style="height:100%;">
+<div class="home">
 
    <div style="text-align:center;">
    <%= form_tag seguros_path, :method => 'get' do %>
@@ -10,31 +10,31 @@
 </div>
 
 
-<div class="container">
+<div class="container" style="margin-bottom: 200px; color:black !important;">
   <div class="row">
-    <div class="col-sm" id="seguroslista" style="text-align:center;">
-<h3>Empresas</h3>
+    <div class="col-sm" id="seguroslista" style="text-align:center; ">
+
+      <ul style="color:black !important;">
+<li><h3 style="margin-bottom: 20px;">Empresas</h3></li>
 
 
 
 
-<% @seguros.each do |seguro| %>
+
+    <% @seguros.where(tipo: 'Empresa').each do |seguro| %>
 
  <%= link_to seguro do %>
 
+   <li style="color:black !important; font-size:17px;"><%= seguro[:name] %></li><br>
+   <% end %>
+   <% if admin_signed_in? %>
 
- <% if seguro.tipo == 'Empresa'   %>
-    <span  class="seguroname" style="display:block; text-align:center;"><%= seguro[:name] %></span>
-
-    <% else seguro.tipo != 'Empresa' %>
-
+    <a style="color: black !important;">  <%= link_to 'Edit', edit_seguro_path(seguro) %></a>
+   <a style="color: black !important;">  <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %></a>
   <% end %>
-<% end %>
-
-
-
-
-<% end %>
+  <% end %>
+</li>
+   </ul>
 
 </div>
 
@@ -43,28 +43,26 @@
 
 
 <div class="col-sm" style="text-align:center;">
-<h3>Particular</h3>
+  <ul style="color:black !important; ">
+<li><h3 style="margin-bottom: 20px;">Particular</h3></li>
 
 
 
 
+     <% @seguros.where(tipo: 'Particular').each do |seguro| %>
 
-<% @seguros.each do |seguro| %>
-    <%= link_to seguro do %>
+ <%= link_to seguro do %>
 
-      <% if seguro.tipo == 'Particular'   %>
-     <span class="seguroname" style="display: block;"><%= seguro[:name] %></span>
+   <li style="color:black !important; text-align:center; font-size:17px; "><%= seguro[:name] %></li><br>
+   <% end %>
+   <% if admin_signed_in? %>
 
-     <% else seguro.tipo != 'Particular' %>
-      <% end %>
-    <% end %>
-
-  <% if admin_signed_in? %>
-
-      <%= link_to 'Edit', edit_seguro_path(seguro) %>
-      <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <a style="color: black !important;">  <%= link_to 'Edit', edit_seguro_path(seguro) %></a>
+   <a style="color: black !important;">  <%= link_to 'Destroy', seguro, method: :delete, data: { confirm: 'Are you sure?' } %></a>
   <% end %>
-<% end %>
+  <% end %>
+</li>
+   </ul>
 </div>
 </div>
 </div>
@@ -83,7 +81,7 @@
 <li><%= link_to 'New Seguro', new_seguro_path %></li>
 <% end %>
 
-</div>
+
 
 
 

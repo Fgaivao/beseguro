@@ -15,10 +15,16 @@
  */
 html, body {
     height: 100%;
+    position: relative;
 }
 .home{
-  height: 100%;
+  min-height: 100vh;
+  display: block;
+  overflow: hidden;
+ position: relative;
+ padding-bottom: 250px; /* height of your footer */
 }
+
 @media screen and (max-width: 1252px) {
 .logo{
  margin-right: 70% !important;
@@ -26,7 +32,7 @@ html, body {
 }
 
  * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   text-decoration: none;
  }
  html {
@@ -55,8 +61,9 @@ footer{
   width:100%;
   background-color: #22282e;
   color: white !important;
-  margin-bottom: 0%;
-  top: auto !important;
+  bottom: 0;
+  height:250px;
+
 }
 
 @media screen and (max-width: 980px) {
@@ -64,6 +71,7 @@ footer{
 bottom: 0;
   }
 }
+
 
 
 
@@ -271,10 +279,10 @@ cursor: pointer;
     margin-right: 90px;
   }
   a{
-    color:white !important;
+    color:white;
   }
   p{
-    font-size: 1.6em !important;
+    font-size: 1.2em !important;
   }
 
 
