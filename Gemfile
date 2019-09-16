@@ -6,7 +6,7 @@ ruby '2.4.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 gem 'carrierwave', '~> 0.10.0'
-gem 'mini_magick', '~> 4.3'
+gem 'mini_magick', '~> 4.9.4'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.3.6'
 # Use Puma as the app server
@@ -31,7 +31,7 @@ gem 'cloudinary', '~> 1.9.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem "devise"
+gem "devise", '~> 4.7.1'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'dotenv-rails', groups: [:development, :test]
 
