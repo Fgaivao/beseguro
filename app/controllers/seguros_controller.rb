@@ -12,7 +12,7 @@ class SegurosController < ApplicationController
   # GET /seguros/1
   # GET /seguros/1.json
   def show
-    @seguro = Seguro.find(params[:id])
+    @seguro = Seguro.friendly.find(params[:id])
   end
 
   # GET /seguros/new
@@ -87,7 +87,7 @@ class SegurosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_seguro
-      @seguro = Seguro.find(params[:id])
+      @seguro = Seguro.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

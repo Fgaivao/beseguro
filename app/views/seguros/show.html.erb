@@ -6,7 +6,7 @@
 
   <div style="margin-left: 50px; margin-top: 100px;">
   <h3 style="margin-bottom: 30px; text-align:center;"><%= @seguro.name %></h3>
-  <h4 style="margin-bottom: 30px"><%= @seguro.tipo %></h4>
+
    </div>
 
   <hr>
@@ -24,7 +24,7 @@
 <% if @admin_signed_in %>
 <%= link_to 'Edit', edit_seguro_path(@seguro) %>
 <% end %>
-<%= link_to 'Back', seguros_path %>
+<%= link_to 'Voltar', seguros_path %>
 
 
 

@@ -34,6 +34,7 @@ gem 'cloudinary', '~> 1.9.1'
 gem "devise", '~> 4.7.1'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'friendly_id', '~> 5.2.4'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
