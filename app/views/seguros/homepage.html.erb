@@ -54,12 +54,12 @@ return false;
 <div class='popup'>
 <div class='cnt223'>
 
-     <h1>Seguro da Semana</h1>
+     <h1>Destaque</h1>
         <% @seguros.each do |seguro| %>
 
         <%= link_to seguro do %>
 
-  <% if seguro.tipo == 'Oferta'   %>
+  <% if seguro.tipo == 'Destaque'   %>
     <button class="poptxt" style="display:block; text-align:center;"><%= seguro[:name] %></button>
     <p style="margin-top:30px;">Aproveite a nova campanha!</p>
       <% end %>

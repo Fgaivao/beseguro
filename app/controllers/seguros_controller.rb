@@ -32,7 +32,7 @@ class SegurosController < ApplicationController
     respond_to do |format|
       if @seguro.save
         format.html { redirect_to @seguro, notice: 'Seguro was successfully created.' }
-        format.json { render :show, status: :created, location: @seguro }
+        format.json { render :index}
       else
         format.html { render :new }
         format.json { render json: @seguro.errors, status: :unprocessable_entity }
