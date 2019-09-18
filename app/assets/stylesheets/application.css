@@ -17,6 +17,10 @@ html, body {
     height: 100%;
     position: relative;
 }
+.navbar-nav>li>a{
+line-height: 30px !important;
+}
+
 .home{
   min-height: 100vh;
   display: block;
