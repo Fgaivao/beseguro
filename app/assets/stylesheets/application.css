@@ -193,7 +193,7 @@ margin: 0 auto;
 display: none;
 position: fixed;
 z-index: 101;
-bottom:30%;
+bottom:15%;
 }
 .cnt223{
 min-width: 600px;
@@ -238,6 +238,7 @@ cursor: pointer;
   margin-top: 20px;
   padding: 10px;
   transition:0.2s;
+  min-width:100%;
 }
 
 .poptxt:hover{
