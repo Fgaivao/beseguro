@@ -78,3 +78,12 @@ test:
   username: franciscogaivao
   password:
   timeout: 5000
+
+  production: 
+  adapter: postgresql
+  encoding: unicode
+  database: beseguro_test
+  pool: 5
+  username: franciscogaivao
+  password:
+  timeout: 5000
