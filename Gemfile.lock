@@ -268,7 +268,7 @@ DEPENDENCIES
   dotenv-rails
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.5)
-  listen
+  listen (>= 3.0.5)
   mail_form (~> 1.5, >= 1.5.1)
   mini_magick (~> 4.9.4)
   pg
