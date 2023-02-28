@@ -82,7 +82,7 @@ test:
   production: 
   adapter: postgresql
   encoding: unicode
-  database: beseguro_test
+  database: beseguro_development
   pool: 5
   username: franciscogaivao
   password:
